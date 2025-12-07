@@ -90,19 +90,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                     </p>
                                 </div>
 
-                                <div className="flex gap-4">
-                                    <Link href="/contact" className="flex-1">
-                                        <Button size="lg" className="w-full">
-                                            Request Quote
-                                            <ArrowRight className="ml-2 h-4 w-4" />
-                                        </Button>
-                                    </Link>
-                                    <Link href="/contact">
-                                        <Button size="lg" variant="outline">
-                                            Contact Us
-                                        </Button>
-                                    </Link>
-                                </div>
+                                <Link href="/contact" className="w-full">
+                                    <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                                        Request Quote
+                                        <ArrowRight className="ml-2 h-4 w-4" />
+                                    </Button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -161,12 +154,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                     As manufacturers, we understand that versatility is key in meeting the diverse needs of our clients. {product.name} is crafted to be a versatile ingredient, seamlessly integrating into a wide range of applications.
                                 </p>
                                 <div className="grid sm:grid-cols-2 gap-4 mt-6">
-                                {product.features.map((feature, index) => (
-                                    <div key={index} className="flex items-start space-x-3">
-                                        <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                                        <span className="text-lg">{feature}</span>
-                                    </div>
-                                ))}
+                                    {product.features.map((feature, index) => (
+                                        <div key={index} className="flex items-start space-x-3">
+                                            <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                                            <span className="text-lg">{feature}</span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
@@ -243,19 +236,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                             <p className="text-lg text-muted-foreground mb-8">
                                 Contact us today to get a custom quote for your bulk order. Our team is ready to assist you with all your sugar supply needs.
                             </p>
-                            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <Link href="/contact">
-                                    <Button size="lg" className="w-full sm:w-auto">
-                                        Request Quote
-                                        <ArrowRight className="ml-2 h-4 w-4" />
-                                    </Button>
-                                </Link>
-                                <Link href="/contact">
-                                    <Button size="lg" variant="outline" className="w-full sm:w-auto">
-                                        Contact Us
-                                    </Button>
-                                </Link>
-                            </div>
+                            <Link href="/contact">
+                                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                                    Request Quote
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                </Button>
+                            </Link>
                         </div>
                     </div>
                 </section>
@@ -288,14 +274,14 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
                 {/* Related Products - All Products */}
                 <section className="py-16 md:py-24 bg-muted/20">
-                        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-3xl font-bold mb-8 text-center">Our Best Related Products</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                             {products.filter(p => p.id !== product.id).slice(0, 8).map((relatedProduct) => (
-                                    <Link
-                                        key={relatedProduct.id}
-                                        href={`/products/${relatedProduct.slug}`}
-                                    >
+                                <Link
+                                    key={relatedProduct.id}
+                                    href={`/products/${relatedProduct.slug}`}
+                                >
                                     <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-primary/30 overflow-hidden group">
                                         <div className="relative h-48">
                                             <Image
@@ -312,16 +298,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                                     </Badge>
                                                 </div>
                                             )}
-                                            </div>
-                                            <CardHeader>
+                                        </div>
+                                        <CardHeader>
                                             <CardTitle className="text-base line-clamp-2 group-hover:text-primary transition-colors">
-                                                    {relatedProduct.name}
-                                                </CardTitle>
-                                            </CardHeader>
-                                        </Card>
-                                    </Link>
-                                ))}
-                            </div>
+                                                {relatedProduct.name}
+                                            </CardTitle>
+                                        </CardHeader>
+                                    </Card>
+                                </Link>
+                            ))}
+                        </div>
                         <div className="text-center mt-8">
                             <Link href="/products">
                                 <Button variant="outline" size="lg">
@@ -330,8 +316,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                 </Button>
                             </Link>
                         </div>
-                        </div>
-                    </section>
+                    </div>
+                </section>
             </main>
             <Footer />
         </>

@@ -346,7 +346,6 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --color-gray-50: #f9fafb;
     --color-gray-200: #e5e7eb;
-    --color-gray-600: #4a5565;
     --color-gray-700: #364153;
     --color-gray-900: #101828;
     --color-black: #000;
@@ -408,7 +407,6 @@
     :root, :host {
       --color-gray-50: lab(98.2596% -.247031 -.706708);
       --color-gray-200: lab(91.6229% -.159115 -2.26791);
-      --color-gray-600: lab(35.6337% -1.58697 -10.8425);
       --color-gray-700: lab(27.1134% -.956401 -12.3224);
       --color-gray-900: lab(8.11897% .811279 -12.254);
     }
@@ -1194,6 +1192,10 @@
     rotate: 45deg;
   }
 
+  .rotate-180 {
+    rotate: 180deg;
+  }
+
   .transform {
     transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
   }
@@ -1661,6 +1663,10 @@
     padding-bottom: calc(var(--spacing) * 4);
   }
 
+  .pl-6 {
+    padding-left: calc(var(--spacing) * 6);
+  }
+
   .text-center {
     text-align: center;
   }
@@ -1752,8 +1758,8 @@
     white-space: nowrap;
   }
 
-  .text-gray-600 {
-    color: var(--color-gray-600);
+  .text-gray-200 {
+    color: var(--color-gray-200);
   }
 
   .text-gray-700 {
@@ -2237,14 +2243,14 @@
   }
 
   @media (min-width: 40rem) {
-    .sm\:w-\[400px\] {
-      width: 400px;
+    .sm\:block {
+      display: block;
     }
   }
 
   @media (min-width: 40rem) {
-    .sm\:w-auto {
-      width: auto;
+    .sm\:w-\[400px\] {
+      width: 400px;
     }
   }
 
@@ -2366,20 +2372,14 @@
   }
 
   @media (min-width: 48rem) {
-    .md\:items-center {
-      align-items: center;
-    }
-  }
-
-  @media (min-width: 48rem) {
-    .md\:justify-between {
-      justify-content: space-between;
-    }
-  }
-
-  @media (min-width: 48rem) {
     .md\:gap-6 {
       gap: calc(var(--spacing) * 6);
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:gap-8 {
+      gap: calc(var(--spacing) * 8);
     }
   }
 
@@ -2535,7 +2535,7 @@
   --card-foreground: 222 47% 11%;
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
-  --primary: 210 100% 50%;
+  --primary: 28 51% 28%;
   --primary-foreground: 0 0% 100%;
   --secondary: 45 93% 58%;
   --secondary-foreground: 222 47% 11%;
@@ -2562,8 +2562,8 @@
   --card-foreground: 210 40% 98%;
   --popover: 222 47% 15%;
   --popover-foreground: 210 40% 98%;
-  --primary: 210 100% 55%;
-  --primary-foreground: 222 47% 11%;
+  --primary: 28 51% 28%;
+  --primary-foreground: 0 0% 100%;
   --secondary: 45 93% 55%;
   --secondary-foreground: 222 47% 11%;
   --muted: 217 33% 17%;

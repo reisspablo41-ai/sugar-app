@@ -39,7 +39,7 @@ const buttonVariants = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_
         variant: {
             default: "bg-primary text-primary-foreground hover:bg-primary/90",
             destructive: "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-            outline: "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+            outline: "border bg-primary text-primary-foreground shadow-xs hover:bg-primary/90 hover:text-primary-foreground dark:bg-primary dark:border-primary dark:hover:bg-primary/90",
             secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
             ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
             link: "text-primary underline-offset-4 hover:underline"
@@ -6158,7 +6158,10 @@ function SheetContent({ className, children, side = "right", ...props }) {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$radix$2d$ui$2f$react$2d$dialog$2f$dist$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Content"], {
                 "data-slot": "sheet-content",
-                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("bg-background data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500", side === "right" && "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm", side === "left" && "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left inset-y-0 left-0 h-full w-3/4 border-r sm:max-w-sm", side === "top" && "data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top inset-x-0 top-0 h-auto border-b", side === "bottom" && "data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom inset-x-0 bottom-0 h-auto border-t", className),
+                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-white data-[state=open]:animate-in data-[state=closed]:animate-out fixed z-50 flex flex-col gap-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500", side === "right" && "data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right inset-y-0 right-0 h-full w-3/4 border-l sm:max-w-sm", side === "left" && "data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left inset-y-0 left-0 h-full w-3/4 border-r sm:max-w-sm", side === "top" && "data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top inset-x-0 top-0 h-auto border-b", side === "bottom" && "data-[state=closed]:slide-out-to-bottom data-[state=open]:slide-in-from-bottom inset-x-0 bottom-0 h-auto border-t", className),
+                style: {
+                    backgroundColor: 'hsl(var(--primary))'
+                },
                 ...props,
                 children: [
                     children,
@@ -6169,7 +6172,7 @@ function SheetContent({ className, children, side = "right", ...props }) {
                                 className: "size-4"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/sheet.tsx",
-                                lineNumber: 76,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6177,13 +6180,13 @@ function SheetContent({ className, children, side = "right", ...props }) {
                                 children: "Close"
                             }, void 0, false, {
                                 fileName: "[project]/components/ui/sheet.tsx",
-                                lineNumber: 77,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/ui/sheet.tsx",
-                        lineNumber: 75,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this)
                 ]
@@ -6207,7 +6210,7 @@ function SheetHeader({ className, ...props }) {
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/sheet.tsx",
-        lineNumber: 86,
+        lineNumber: 87,
         columnNumber: 5
     }, this);
 }
@@ -6219,7 +6222,7 @@ function SheetFooter({ className, ...props }) {
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/sheet.tsx",
-        lineNumber: 96,
+        lineNumber: 97,
         columnNumber: 5
     }, this);
 }
@@ -6231,7 +6234,7 @@ function SheetTitle({ className, ...props }) {
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/sheet.tsx",
-        lineNumber: 109,
+        lineNumber: 110,
         columnNumber: 5
     }, this);
 }
@@ -6243,7 +6246,7 @@ function SheetDescription({ className, ...props }) {
         ...props
     }, void 0, false, {
         fileName: "[project]/components/ui/sheet.tsx",
-        lineNumber: 122,
+        lineNumber: 123,
         columnNumber: 5
     }, this);
 }
@@ -6372,6 +6375,7 @@ function Header() {
     _s();
     const [isOpen, setIsOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [openDropdown, setOpenDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [mobileOpenDropdown, setMobileOpenDropdown] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].header, {
         initial: {
             y: -100
@@ -6383,9 +6387,15 @@ function Header() {
             duration: 0.6,
             ease: "easeOut"
         },
-        className: "sticky top-0 z-50 w-full border-b bg-white shadow-sm",
+        className: "sticky top-0 z-50 w-full border-b bg-primary text-white shadow-sm",
+        style: {
+            backgroundColor: 'hsl(var(--primary))'
+        },
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "container mx-auto px-4 sm:px-6 lg:px-8",
+            className: "container mx-auto px-4 sm:px-6 lg:px-8 text-white text-sm",
+            style: {
+                backgroundColor: 'hsl(var(--primary))'
+            },
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex h-20 items-center justify-between",
                 children: [
@@ -6401,12 +6411,12 @@ function Header() {
                             priority: true
                         }, void 0, false, {
                             fileName: "[project]/components/layout/header.tsx",
-                            lineNumber: 57,
+                            lineNumber: 59,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/layout/header.tsx",
-                        lineNumber: 56,
+                        lineNumber: 58,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -6418,7 +6428,7 @@ function Header() {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                         href: item.href,
-                                        className: "px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors rounded-md hover:bg-gray-50",
+                                        className: "px-4 py-2 text-sm font-medium text-white hover:text-secondary transition-colors rounded-md hover:bg-primary/80",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center gap-1",
                                             children: [
@@ -6427,18 +6437,18 @@ function Header() {
                                                     className: "h-4 w-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/layout/header.tsx",
-                                                    lineNumber: 82,
+                                                    lineNumber: 84,
                                                     columnNumber: 59
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/components/layout/header.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 82,
                                             columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/header.tsx",
-                                        lineNumber: 76,
+                                        lineNumber: 78,
                                         columnNumber: 33
                                     }, this),
                                     item.dropdown && openDropdown === item.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6449,23 +6459,23 @@ function Header() {
                                                 children: dropdownItem.name
                                             }, dropdownItem.name, false, {
                                                 fileName: "[project]/components/layout/header.tsx",
-                                                lineNumber: 90,
+                                                lineNumber: 92,
                                                 columnNumber: 45
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/components/layout/header.tsx",
-                                        lineNumber: 88,
+                                        lineNumber: 90,
                                         columnNumber: 37
                                     }, this)
                                 ]
                             }, item.name, true, {
                                 fileName: "[project]/components/layout/header.tsx",
-                                lineNumber: 70,
+                                lineNumber: 72,
                                 columnNumber: 29
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/layout/header.tsx",
-                        lineNumber: 68,
+                        lineNumber: 70,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6473,21 +6483,21 @@ function Header() {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/contact",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                className: "bg-primary hover:bg-primary/90",
+                                className: "bg-secondary text-primary hover:bg-secondary/90",
                                 children: "Get Quote"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/header.tsx",
-                                lineNumber: 107,
+                                lineNumber: 109,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/layout/header.tsx",
-                            lineNumber: 106,
+                            lineNumber: 108,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/components/layout/header.tsx",
-                        lineNumber: 105,
+                        lineNumber: 107,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Sheet"], {
@@ -6505,7 +6515,7 @@ function Header() {
                                             className: "h-6 w-6"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/header.tsx",
-                                            lineNumber: 117,
+                                            lineNumber: 119,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -6513,59 +6523,82 @@ function Header() {
                                             children: "Toggle menu"
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/header.tsx",
-                                            lineNumber: 118,
+                                            lineNumber: 120,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/header.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 118,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/header.tsx",
-                                lineNumber: 115,
+                                lineNumber: 117,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$sheet$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SheetContent"], {
                                 side: "right",
-                                className: "w-[300px] sm:w-[400px]",
+                                className: "w-[300px] sm:w-[400px] pl-6",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                                     className: "flex flex-col space-y-4 mt-8",
                                     children: [
                                         navigation.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                    item.dropdown ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                                        onClick: ()=>setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name),
+                                                        className: "flex items-center justify-between w-full py-2 text-base font-medium text-white hover:text-secondary transition-colors",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                children: item.name
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/layout/header.tsx",
+                                                                lineNumber: 132,
+                                                                columnNumber: 49
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
+                                                                className: `h-4 w-4 transition-transform ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/components/layout/header.tsx",
+                                                                lineNumber: 133,
+                                                                columnNumber: 49
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/components/layout/header.tsx",
+                                                        lineNumber: 128,
+                                                        columnNumber: 45
+                                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                         href: item.href,
-                                                        className: "block py-2 text-base font-medium text-gray-700 hover:text-primary transition-colors",
-                                                        onClick: ()=>!item.dropdown && setIsOpen(false),
+                                                        className: "block py-2 text-base font-medium text-white hover:text-secondary transition-colors",
+                                                        onClick: ()=>setIsOpen(false),
                                                         children: item.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/header.tsx",
-                                                        lineNumber: 125,
-                                                        columnNumber: 41
+                                                        lineNumber: 138,
+                                                        columnNumber: 45
                                                     }, this),
-                                                    item.dropdown && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    item.dropdown && mobileOpenDropdown === item.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "ml-4 mt-2 space-y-2",
                                                         children: item.dropdown.map((dropdownItem)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                                 href: dropdownItem.href,
-                                                                className: "block py-1 text-sm text-gray-600 hover:text-primary transition-colors",
+                                                                className: "block py-1 text-sm text-gray-200 hover:text-secondary transition-colors",
                                                                 onClick: ()=>setIsOpen(false),
                                                                 children: dropdownItem.name
                                                             }, dropdownItem.name, false, {
                                                                 fileName: "[project]/components/layout/header.tsx",
-                                                                lineNumber: 135,
+                                                                lineNumber: 149,
                                                                 columnNumber: 53
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/layout/header.tsx",
-                                                        lineNumber: 133,
+                                                        lineNumber: 147,
                                                         columnNumber: 45
                                                     }, this)
                                                 ]
                                             }, item.name, true, {
                                                 fileName: "[project]/components/layout/header.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 126,
                                                 columnNumber: 37
                                             }, this)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -6576,49 +6609,49 @@ function Header() {
                                                 children: "Get Quote"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/layout/header.tsx",
-                                                lineNumber: 149,
+                                                lineNumber: 163,
                                                 columnNumber: 37
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/components/layout/header.tsx",
-                                            lineNumber: 148,
+                                            lineNumber: 162,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/layout/header.tsx",
-                                    lineNumber: 122,
+                                    lineNumber: 124,
                                     columnNumber: 29
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/header.tsx",
-                                lineNumber: 121,
+                                lineNumber: 123,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/layout/header.tsx",
-                        lineNumber: 114,
+                        lineNumber: 116,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/layout/header.tsx",
-                lineNumber: 54,
+                lineNumber: 56,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/components/layout/header.tsx",
-            lineNumber: 53,
+            lineNumber: 55,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/components/layout/header.tsx",
-        lineNumber: 47,
+        lineNumber: 48,
         columnNumber: 9
     }, this);
 }
-_s(Header, "fT+T6kPpSoFTeBAdpW9dNPXByk0=");
+_s(Header, "zpwtiFH9i24MewV+Q90aNqhqu3c=");
 _c = Header;
 var _c;
 __turbopack_context__.k.register(_c, "Header");

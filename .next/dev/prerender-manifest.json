@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "3724b5d04b95a38f8bc10e0375552f9e",
-    "previewModeSigningKey": "bb33ba76ddde57e195a16f23981bdbb21a83aa84fdd25b97c8adc8161cbf9401",
-    "previewModeEncryptionKey": "9298e69ea48d442e4a4e80099604405ff28311b0fa48cd888a9fd9d182f944b6"
-  }
-}
+{"version":4,"routes":{"/products/icumsa-45-white-refined-sugar":{},"/products/icumsa-100-cane-sugar":{},"/products/icumsa-150-cane-sugar":{},"/products/icumsa-600-1200-cane-sugar":{},"/products/fine-crystal-sugar":{},"/products/extra-fine-crystal-sugar":{},"/products/big-granulated-sugar":{},"/products/sugar-powder":{},"/products/raw-sugar":{},"/products/white-granulated-sugar":{},"/products/crystal-white-sugar":{},"/products/brazil-refined-cane-sugar":{}},"dynamicRoutes":{"/products/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/products/[slug]","routeRegex":"^\\/products\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"c307726c9d697b9ab72283b7c84d0404","previewModeSigningKey":"c73cfa2203067fab9baa66c07c3d581b55233673bea82b92daf93cf122d33ad5","previewModeEncryptionKey":"76e56a296f5cac0889c407ec8eb5c3f1cf8e5aceb90d4b4bcdd642108c5375f3"}}

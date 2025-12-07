@@ -13,8 +13,8 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222 47% 11%;
 
-  /* Primary: Vibrant Blue */
-  --primary: 210 100% 50%;
+  /* Primary: Brown Sugar #6b4423 */
+  --primary: 28 51% 28%;
   --primary-foreground: 0 0% 100%;
 
   /* Secondary: Warm Gold/Amber */
@@ -51,8 +51,8 @@
   --popover: 222 47% 15%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 210 100% 55%;
-  --primary-foreground: 222 47% 11%;
+  --primary: 28 51% 28%;
+  --primary-foreground: 0 0% 100%;
 
   --secondary: 45 93% 55%;
   --secondary-foreground: 222 47% 11%;

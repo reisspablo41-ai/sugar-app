@@ -42,15 +42,17 @@ const navigation = [
 export function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+    const [mobileOpenDropdown, setMobileOpenDropdown] = useState<string | null>(null);
 
     return (
         <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="sticky top-0 z-50 w-full border-b bg-white shadow-sm"
+            className="sticky top-0 z-50 w-full border-b bg-primary text-white shadow-sm"
+            style={{ backgroundColor: 'hsl(var(--primary))' }}
         >
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-white text-sm" style={{ backgroundColor: 'hsl(var(--primary))' }}>
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center">
@@ -75,7 +77,7 @@ export function Header() {
                             >
                                 <Link
                                     href={item.href}
-                                    className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-primary transition-colors rounded-md hover:bg-gray-50"
+                                    className="px-4 py-2 text-sm font-medium text-white hover:text-secondary transition-colors rounded-md hover:bg-primary/80"
                                 >
                                     <span className="flex items-center gap-1">
                                         {item.name}
@@ -104,7 +106,7 @@ export function Header() {
                     {/* CTA Button */}
                     <div className="hidden md:block">
                         <Link href="/contact">
-                            <Button className="bg-primary hover:bg-primary/90">
+                            <Button className="bg-secondary text-primary hover:bg-secondary/90">
                                 Get Quote
                             </Button>
                         </Link>
@@ -118,24 +120,36 @@ export function Header() {
                                 <span className="sr-only">Toggle menu</span>
                             </Button>
                         </SheetTrigger>
-                        <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                        <SheetContent side="right" className="w-[300px] sm:w-[400px] pl-6">
                             <nav className="flex flex-col space-y-4 mt-8">
                                 {navigation.map((item) => (
                                     <div key={item.name}>
-                                        <Link
-                                            href={item.href}
-                                            className="block py-2 text-base font-medium text-gray-700 hover:text-primary transition-colors"
-                                            onClick={() => !item.dropdown && setIsOpen(false)}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                        {item.dropdown && (
+                                        {item.dropdown ? (
+                                            <button
+                                                onClick={() => setMobileOpenDropdown(mobileOpenDropdown === item.name ? null : item.name)}
+                                                className="flex items-center justify-between w-full py-2 text-base font-medium text-white hover:text-secondary transition-colors"
+                                            >
+                                                <span>{item.name}</span>
+                                                <ChevronDown
+                                                    className={`h-4 w-4 transition-transform ${mobileOpenDropdown === item.name ? 'rotate-180' : ''}`}
+                                                />
+                                            </button>
+                                        ) : (
+                                            <Link
+                                                href={item.href}
+                                                className="block py-2 text-base font-medium text-white hover:text-secondary transition-colors"
+                                                onClick={() => setIsOpen(false)}
+                                            >
+                                                {item.name}
+                                            </Link>
+                                        )}
+                                        {item.dropdown && mobileOpenDropdown === item.name && (
                                             <div className="ml-4 mt-2 space-y-2">
                                                 {item.dropdown.map((dropdownItem) => (
                                                     <Link
                                                         key={dropdownItem.name}
                                                         href={dropdownItem.href}
-                                                        className="block py-1 text-sm text-gray-600 hover:text-primary transition-colors"
+                                                        className="block py-1 text-sm text-gray-200 hover:text-secondary transition-colors"
                                                         onClick={() => setIsOpen(false)}
                                                     >
                                                         {dropdownItem.name}

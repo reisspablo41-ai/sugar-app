@@ -2,6 +2,12 @@
   "app": {
     "[project]/app/page": [
       "static/media/f141b5b7abe57afc-s.p.0de3c900.woff2"
+    ],
+    "[project]/app/products/[slug]/page": [
+      "static/media/f141b5b7abe57afc-s.p.0de3c900.woff2"
+    ],
+    "[project]/app/products/page": [
+      "static/media/f141b5b7abe57afc-s.p.0de3c900.woff2"
     ]
   },
   "appUsingSizeAdjust": true,
