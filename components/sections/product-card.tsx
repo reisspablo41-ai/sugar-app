@@ -64,7 +64,11 @@ export function ProductCard({ product }: ProductCardProps) {
                                 </li>
                             ))}
                         </ul>
-                        <Button variant="ghost" className="w-full group/btn">
+                        <Button 
+                            variant="default" 
+                            className="w-full group/btn !bg-primary !text-primary-foreground hover:!bg-primary/90"
+                            style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
+                        >
                             Learn More
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
                         </Button>

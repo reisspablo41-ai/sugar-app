@@ -18,3 +18,17 @@ If you want to hide the `DialogTitle`, you can wrap it with our VisuallyHidden c
 
 For more information, see https://radix-ui.com/primitives/docs/components/dialog
 [00:02:37.655] Browser WARN    Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}.
+[00:03:46.786] Server  LOG      ✓ Compiled in 30ms
+[00:05:58.962] Server  LOG      ✓ Compiled in 27ms
+[00:06:12.138] Browser WARN    Image with src "/images/white-cubes-of-sugar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.138] Browser WARN    Image with src "/images/brown-sugar-5847979_1920.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.138] Browser WARN    Image with src "/images/powder-sugar.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.138] Browser WARN    Image with src "/images/production-facility.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.138] Browser WARN    Image with src "/images/white-powder-sugar-on-teaspoon.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.590] Browser WARN    Image with src "/images/brown-and-white-sugar-in-powder-form.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.590] Browser WARN    Image with src "/images/brown-sugar-4918707_1920.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:12.590] Browser WARN    Image with src "/images/sugar-cane-stems-in-sugar-cane-field.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:19.081] Browser WARN    Image with src "/images/products/white-refined-sugar.png" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[00:07:35.371] Browser WARN    Image with src "/images/products/white-refined-sugar.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:12:04.055] Server  LOG      ✓ Compiled in 32ms

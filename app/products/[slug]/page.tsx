@@ -91,7 +91,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                 </div>
 
                                 <Link href="/contact" className="w-full">
-                                    <Button size="lg" className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                                    <Button 
+                                        size="lg" 
+                                        variant="default" 
+                                        className="w-full !bg-primary !text-primary-foreground hover:!bg-primary/90"
+                                        style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
+                                    >
                                         Request Quote
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
@@ -237,7 +242,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                                 Contact us today to get a custom quote for your bulk order. Our team is ready to assist you with all your sugar supply needs.
                             </p>
                             <Link href="/contact">
-                                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                                <Button 
+                                    size="lg" 
+                                    variant="default" 
+                                    className="!bg-primary !text-primary-foreground hover:!bg-primary/90"
+                                    style={{ backgroundColor: 'hsl(var(--primary))', color: 'hsl(var(--primary-foreground))' }}
+                                >
                                     Request Quote
                                     <ArrowRight className="ml-2 h-4 w-4" />
                                 </Button>

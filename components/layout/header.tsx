@@ -106,7 +106,7 @@ export function Header() {
                     {/* CTA Button */}
                     <div className="hidden md:block">
                         <Link href="/contact">
-                            <Button className="bg-secondary text-primary hover:bg-secondary/90">
+                            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
                                 Get Quote
                             </Button>
                         </Link>
