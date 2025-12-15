@@ -9,18 +9,18 @@ export function TopBar() {
                     {/* Contact Info */}
                     <div className="flex flex-wrap items-center gap-4 md:gap-6 text-xs">
                         <Link
-                            href="mailto:info@sugar-supplier.com"
+                            href="mailto:contact@premiumsugarsuppliers.com"
                             className="flex items-center gap-2 hover:text-secondary transition-colors"
                         >
                             <Mail className="h-3 w-3" />
-                            <span>info@sugar-supplier.com</span>
+                            <span>contact@premiumsugarsuppliers.com</span>
                         </Link>
                         <Link
-                            href="https://wa.me/1234567890"
+                            href="https://wa.me/5511931471328"
                             className="flex items-center gap-2 hover:text-secondary transition-colors"
                         >
                             <Phone className="h-3 w-3" />
-                            <span>WhatsApp: +1 (234) 567-890</span>
+                            <span>WhatsApp: +5511931471328</span>
                         </Link>
                         <div className="flex items-center gap-2">
                             <MapPin className="h-3 w-3" />

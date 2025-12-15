@@ -106,19 +106,19 @@ export function Footer() {
                             <div className="flex items-center space-x-3">
                                 <Phone className="h-5 w-5 text-primary flex-shrink-0" />
                                 <a
-                                    href="tel:+55123456789"
+                                    href="tel:+5511931471328"
                                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                                 >
-                                    +55 (11) 1234-5678
+                                    +5511931471328
                                 </a>
                             </div>
                             <div className="flex items-center space-x-3">
                                 <Mail className="h-5 w-5 text-primary flex-shrink-0" />
                                 <a
-                                    href="mailto:info@brazilsugar.com"
+                                    href="mailto:contact@premiumsugarsuppliers.com"
                                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                                 >
-                                    info@brazilsugar.com
+                                    contact@premiumsugarsuppliers.com
                                 </a>
                             </div>
                         </div>

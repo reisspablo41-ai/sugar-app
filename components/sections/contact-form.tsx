@@ -28,6 +28,7 @@ interface ContactFormProps {
 
 export function ContactForm({ variant = "dark" }: ContactFormProps) {
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const {
         register,
@@ -39,12 +40,27 @@ export function ContactForm({ variant = "dark" }: ContactFormProps) {
     });
 
     const onSubmit = async (data: FormValues) => {
-        // Simulate API call
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        console.log(data);
-        setIsSubmitted(true);
-        reset();
-        setTimeout(() => setIsSubmitted(false), 5000);
+        try {
+            setError(null);
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || "Failed to send message");
+            }
+
+            setIsSubmitted(true);
+            reset();
+            setTimeout(() => setIsSubmitted(false), 5000);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "An error occurred. Please try again.");
+        }
     };
 
     if (isSubmitted) {
@@ -90,7 +106,7 @@ export function ContactForm({ variant = "dark" }: ContactFormProps) {
                                 </div>
                                 <div>
                                     <CardTitle className={`text-base ${variant === "dark" ? "text-white" : ""}`}>Email</CardTitle>
-                                    <CardDescription className={variant === "dark" ? "text-white/80" : ""}>info@brazilsugar.com</CardDescription>
+                                    <CardDescription className={variant === "dark" ? "text-white/80" : ""}>contact@premiumsugarsuppliers.com</CardDescription>
                                 </div>
                             </div>
                         </CardHeader>
@@ -104,7 +120,7 @@ export function ContactForm({ variant = "dark" }: ContactFormProps) {
                                 </div>
                                 <div>
                                     <CardTitle className={`text-base ${variant === "dark" ? "text-white" : ""}`}>Phone</CardTitle>
-                                    <CardDescription className={variant === "dark" ? "text-white/80" : ""}>+55 (11) 1234-5678</CardDescription>
+                                    <CardDescription className={variant === "dark" ? "text-white/80" : ""}>+5511931471328</CardDescription>
                                 </div>
                             </div>
                         </CardHeader>
@@ -204,6 +220,12 @@ export function ContactForm({ variant = "dark" }: ContactFormProps) {
                                     <p className="text-sm text-destructive">{errors.message.message}</p>
                                 )}
                             </div>
+
+                            {error && (
+                                <div className="p-3 bg-destructive/10 border border-destructive/20 rounded-md">
+                                    <p className="text-sm text-destructive">{error}</p>
+                                </div>
+                            )}
 
                             <Button
                                 type="submit"

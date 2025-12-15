@@ -71,8 +71,8 @@ export default function PrivacyPage() {
                                 If you have any questions about this Privacy Policy, please contact us at:
                             </p>
                             <p>
-                                Email: info@brazilsugar.com<br />
-                                Phone: +55 (11) 1234-5678
+                                Email: contact@premiumsugarsuppliers.com<br />
+                                Phone: +5511931471328
                             </p>
                         </div>
                     </div>
