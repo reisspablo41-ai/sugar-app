@@ -106,7 +106,7 @@ export function Header() {
                     {/* CTA Button */}
                     <div className="hidden md:block">
                         <Link href="/contact">
-                            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                            <Button className="bg-black text-white hover:bg-black/90">
                                 Get Quote
                             </Button>
                         </Link>
@@ -160,7 +160,7 @@ export function Header() {
                                     </div>
                                 ))}
                                 <Link href="/contact" onClick={() => setIsOpen(false)}>
-                                    <Button className="w-full mt-4">Get Quote</Button>
+                                    <Button className="w-full mt-4 bg-black text-white hover:bg-black/90">Get Quote</Button>
                                 </Link>
                             </nav>
                         </SheetContent>

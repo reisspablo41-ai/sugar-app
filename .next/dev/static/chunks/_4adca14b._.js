@@ -6487,7 +6487,7 @@ function Header() {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                             href: "/contact",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                className: "bg-primary text-primary-foreground hover:bg-primary/90",
+                                className: "bg-black text-white hover:bg-black/90",
                                 children: "Get Quote"
                             }, void 0, false, {
                                 fileName: "[project]/components/layout/header.tsx",
@@ -6609,7 +6609,7 @@ function Header() {
                                             href: "/contact",
                                             onClick: ()=>setIsOpen(false),
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
-                                                className: "w-full mt-4",
+                                                className: "w-full mt-4 bg-black text-white hover:bg-black/90",
                                                 children: "Get Quote"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/layout/header.tsx",
@@ -6811,7 +6811,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$label$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/label.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ui/card.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/mail.js [app-client] (ecmascript) <export default as Mail>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/phone.js [app-client] (ecmascript) <export default as Phone>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$map$2d$pin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__MapPin$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/map-pin.js [app-client] (ecmascript) <export default as MapPin>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle2$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-check.js [app-client] (ecmascript) <export default as CheckCircle2>");
 ;
@@ -6838,16 +6837,30 @@ const formSchema = __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$
 function ContactForm({ variant = "dark" }) {
     _s();
     const [isSubmitted, setIsSubmitted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"])({
         resolver: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$hookform$2f$resolvers$2f$zod$2f$dist$2f$zod$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["zodResolver"])(formSchema)
     });
     const onSubmit = async (data)=>{
-        // Simulate API call
-        await new Promise((resolve)=>setTimeout(resolve, 1000));
-        console.log(data);
-        setIsSubmitted(true);
-        reset();
-        setTimeout(()=>setIsSubmitted(false), 5000);
+        try {
+            setError(null);
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            });
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.error || "Failed to send message");
+            }
+            setIsSubmitted(true);
+            reset();
+            setTimeout(()=>setIsSubmitted(false), 5000);
+        } catch (err) {
+            setError(err instanceof Error ? err.message : "An error occurred. Please try again.");
+        }
     };
     if (isSubmitted) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -6865,7 +6878,7 @@ function ContactForm({ variant = "dark" }) {
                     className: "h-16 w-16 text-primary mx-auto mb-4"
                 }, void 0, false, {
                     fileName: "[project]/components/sections/contact-form.tsx",
-                    lineNumber: 57,
+                    lineNumber: 73,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -6873,7 +6886,7 @@ function ContactForm({ variant = "dark" }) {
                     children: "Thank You!"
                 }, void 0, false, {
                     fileName: "[project]/components/sections/contact-form.tsx",
-                    lineNumber: 58,
+                    lineNumber: 74,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6881,13 +6894,13 @@ function ContactForm({ variant = "dark" }) {
                     children: "We've received your message and will get back to you shortly."
                 }, void 0, false, {
                     fileName: "[project]/components/sections/contact-form.tsx",
-                    lineNumber: 59,
+                    lineNumber: 75,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/components/sections/contact-form.tsx",
-            lineNumber: 52,
+            lineNumber: 68,
             columnNumber: 13
         }, this);
     }
@@ -6918,7 +6931,7 @@ function ContactForm({ variant = "dark" }) {
                                 children: "Get in Touch"
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                lineNumber: 77,
+                                lineNumber: 93,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -6926,13 +6939,13 @@ function ContactForm({ variant = "dark" }) {
                                 children: "Have questions about our products or need a custom quote? We're here to help. Fill out the form and our team will respond within 24 hours."
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                lineNumber: 78,
+                                lineNumber: 94,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/sections/contact-form.tsx",
-                        lineNumber: 76,
+                        lineNumber: 92,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6951,12 +6964,12 @@ function ContactForm({ variant = "dark" }) {
                                                     className: `h-5 w-5 ${variant === "dark" ? "text-white" : "text-primary"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                                    lineNumber: 89,
+                                                    lineNumber: 105,
                                                     columnNumber: 37
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 88,
+                                                lineNumber: 104,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -6966,98 +6979,111 @@ function ContactForm({ variant = "dark" }) {
                                                         children: "Email"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                                        lineNumber: 92,
+                                                        lineNumber: 108,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                         className: variant === "dark" ? "text-white/80" : "",
-                                                        children: "info@brazilsugar.com"
+                                                        children: "sales@premiumsugarsuppliers.com"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                                        lineNumber: 93,
+                                                        lineNumber: 109,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 91,
+                                                lineNumber: 107,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 87,
+                                        lineNumber: 103,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 102,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                lineNumber: 85,
+                                lineNumber: 101,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
                                 className: variant === "dark" ? "bg-white/10 backdrop-blur-sm border-white/20" : "",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardHeader"], {
                                     className: "pb-3",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center space-x-3",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                        href: "https://wa.me/5511931471328",
+                                        target: "_blank",
+                                        rel: "noopener noreferrer",
+                                        className: "flex items-center space-x-3 hover:opacity-80 transition-opacity",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: `p-2 rounded-lg ${variant === "dark" ? "bg-primary/20" : "bg-primary/10"}`,
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$phone$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Phone$3e$__["Phone"], {
-                                                    className: `h-5 w-5 ${variant === "dark" ? "text-white" : "text-primary"}`
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                    className: `h-5 w-5 ${variant === "dark" ? "text-white" : "text-primary"}`,
+                                                    fill: "currentColor",
+                                                    viewBox: "0 0 24 24",
+                                                    xmlns: "http://www.w3.org/2000/svg",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        d: "M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/sections/contact-form.tsx",
+                                                        lineNumber: 130,
+                                                        columnNumber: 41
+                                                    }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                                    lineNumber: 103,
+                                                    lineNumber: 124,
                                                     columnNumber: 37
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 123,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardTitle"], {
                                                         className: `text-base ${variant === "dark" ? "text-white" : ""}`,
-                                                        children: "Phone"
+                                                        children: "WhatsApp"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                                        lineNumber: 106,
+                                                        lineNumber: 134,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                         className: variant === "dark" ? "text-white/80" : "",
-                                                        children: "+55 (11) 1234-5678"
+                                                        children: "+5511931471328"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                                        lineNumber: 107,
+                                                        lineNumber: 135,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 133,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 117,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 116,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                lineNumber: 99,
+                                lineNumber: 115,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Card"], {
@@ -7073,12 +7099,12 @@ function ContactForm({ variant = "dark" }) {
                                                     className: `h-5 w-5 ${variant === "dark" ? "text-white" : "text-primary"}`
                                                 }, void 0, false, {
                                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                                    lineNumber: 117,
+                                                    lineNumber: 145,
                                                     columnNumber: 37
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 116,
+                                                lineNumber: 144,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7088,49 +7114,49 @@ function ContactForm({ variant = "dark" }) {
                                                         children: "Location"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                                        lineNumber: 120,
+                                                        lineNumber: 148,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
                                                         className: variant === "dark" ? "text-white/80" : "",
-                                                        children: "São Paulo, Brazil"
+                                                        children: "Estrada da Água Fria, km 42, s/n - Zona Rural, Maracaju - MS, 79150-000, Brazil"
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                                        lineNumber: 121,
+                                                        lineNumber: 149,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 119,
+                                                lineNumber: 147,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 115,
+                                        lineNumber: 143,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 142,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                lineNumber: 113,
+                                lineNumber: 141,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/sections/contact-form.tsx",
-                        lineNumber: 84,
+                        lineNumber: 100,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/sections/contact-form.tsx",
-                lineNumber: 69,
+                lineNumber: 85,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -7158,7 +7184,7 @@ function ContactForm({ variant = "dark" }) {
                                     children: "Send us a Message"
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                    lineNumber: 138,
+                                    lineNumber: 166,
                                     columnNumber: 25
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -7166,13 +7192,13 @@ function ContactForm({ variant = "dark" }) {
                                     children: "Fill out the form below and we'll get back to you soon"
                                 }, void 0, false, {
                                     fileName: "[project]/components/sections/contact-form.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 167,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/sections/contact-form.tsx",
-                            lineNumber: 137,
+                            lineNumber: 165,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -7189,7 +7215,7 @@ function ContactForm({ variant = "dark" }) {
                                                 children: "Name *"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 146,
+                                                lineNumber: 174,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -7199,7 +7225,7 @@ function ContactForm({ variant = "dark" }) {
                                                 className: errors.name ? "border-destructive" : ""
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 175,
                                                 columnNumber: 33
                                             }, this),
                                             errors.name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7207,13 +7233,13 @@ function ContactForm({ variant = "dark" }) {
                                                 children: errors.name.message
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 154,
+                                                lineNumber: 182,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 173,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7225,7 +7251,7 @@ function ContactForm({ variant = "dark" }) {
                                                 children: "Email *"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 159,
+                                                lineNumber: 187,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -7236,7 +7262,7 @@ function ContactForm({ variant = "dark" }) {
                                                 className: errors.email ? "border-destructive" : ""
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 160,
+                                                lineNumber: 188,
                                                 columnNumber: 33
                                             }, this),
                                             errors.email && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7244,13 +7270,13 @@ function ContactForm({ variant = "dark" }) {
                                                 children: errors.email.message
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 168,
+                                                lineNumber: 196,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 186,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7262,7 +7288,7 @@ function ContactForm({ variant = "dark" }) {
                                                 children: "Phone *"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 173,
+                                                lineNumber: 201,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -7272,7 +7298,7 @@ function ContactForm({ variant = "dark" }) {
                                                 className: errors.phone ? "border-destructive" : ""
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 174,
+                                                lineNumber: 202,
                                                 columnNumber: 33
                                             }, this),
                                             errors.phone && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7280,13 +7306,13 @@ function ContactForm({ variant = "dark" }) {
                                                 children: errors.phone.message
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 181,
+                                                lineNumber: 209,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 200,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7298,7 +7324,7 @@ function ContactForm({ variant = "dark" }) {
                                                 children: "Company (Optional)"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 186,
+                                                lineNumber: 214,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Input"], {
@@ -7307,13 +7333,13 @@ function ContactForm({ variant = "dark" }) {
                                                 ...register("company")
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 187,
+                                                lineNumber: 215,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 185,
+                                        lineNumber: 213,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -7325,7 +7351,7 @@ function ContactForm({ variant = "dark" }) {
                                                 children: "Message *"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 195,
+                                                lineNumber: 223,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$textarea$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Textarea"], {
@@ -7336,7 +7362,7 @@ function ContactForm({ variant = "dark" }) {
                                                 className: errors.message ? "border-destructive" : ""
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 196,
+                                                lineNumber: 224,
                                                 columnNumber: 33
                                             }, this),
                                             errors.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -7344,14 +7370,29 @@ function ContactForm({ variant = "dark" }) {
                                                 children: errors.message.message
                                             }, void 0, false, {
                                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                                lineNumber: 204,
+                                                lineNumber: 232,
                                                 columnNumber: 37
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 194,
+                                        lineNumber: 222,
                                         columnNumber: 29
+                                    }, this),
+                                    error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "p-3 bg-destructive/10 border border-destructive/20 rounded-md",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-sm text-destructive",
+                                            children: error
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/sections/contact-form.tsx",
+                                            lineNumber: 238,
+                                            columnNumber: 37
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/sections/contact-form.tsx",
+                                        lineNumber: 237,
+                                        columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Button"], {
                                         type: "submit",
@@ -7360,39 +7401,39 @@ function ContactForm({ variant = "dark" }) {
                                         children: isSubmitting ? "Sending..." : "Send Message"
                                     }, void 0, false, {
                                         fileName: "[project]/components/sections/contact-form.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 242,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/sections/contact-form.tsx",
-                                lineNumber: 144,
+                                lineNumber: 172,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/components/sections/contact-form.tsx",
-                            lineNumber: 143,
+                            lineNumber: 171,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/components/sections/contact-form.tsx",
-                    lineNumber: 136,
+                    lineNumber: 164,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/sections/contact-form.tsx",
-                lineNumber: 130,
+                lineNumber: 158,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/sections/contact-form.tsx",
-        lineNumber: 67,
+        lineNumber: 83,
         columnNumber: 9
     }, this);
 }
-_s(ContactForm, "YR7K/fJ6ovG4b2+92bARMrld+Ng=", false, function() {
+_s(ContactForm, "C15Ubg/Ej7pxbJjiAzDEBuNrlAQ=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$hook$2d$form$2f$dist$2f$index$2e$esm$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useForm"]
     ];

@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env["resend_api"]);
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -16,10 +14,23 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get API key from environment
+    const apiKey = process.env.resend_api || process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.error("Resend API key is missing");
+      return NextResponse.json(
+        { error: "Email service configuration error" },
+        { status: 500 }
+      );
+    }
+
+    // Initialize Resend with API key
+    const resend = new Resend(apiKey);
+
     // Send email using Resend
     const { data, error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // You'll need to update this with your verified domain
-      to: ["contact@premiumsugarsuppliers.com"],
+      to: ["sales@premiumsugarsuppliers.com"],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>

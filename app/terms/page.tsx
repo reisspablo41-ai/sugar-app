@@ -67,7 +67,7 @@ export default function TermsPage() {
                                 For questions regarding these terms, please contact us at:
                             </p>
                             <p>
-                                Email: contact@premiumsugarsuppliers.com<br />
+                                Email: sales@premiumsugarsuppliers.com<br />
                                 Phone: +5511931471328
                             </p>
                         </div>
